@@ -1,4 +1,4 @@
-// 提出コード（トポロジカルソート＋BFS）
+// 提出コード（トポロジカルソート＋DFS(or BFS)）
 
 #include <bits/stdc++.h>
 using namespace std;
