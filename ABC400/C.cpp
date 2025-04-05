@@ -1,4 +1,4 @@
-// 提出コード
+// 提出コード（二分探索）
 
 #include <bits/stdc++.h>
 using namespace std;
