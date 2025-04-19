@@ -25,9 +25,8 @@ jobs:
 ## A - []()
 
 -
-EOF      
+EOF
           echo "Created folder: $FOLDER_NAME"
-
       - name: Commit and push changes
         run: |
           git config --global user.name 'github-actions[bot]'
