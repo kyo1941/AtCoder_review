@@ -21,8 +21,9 @@ jobs:
           FOLDER_NAME="${{ github.ref_name }}"
           mkdir -p "$FOLDER_NAME"
           README_PATH="$FOLDER_NAME/README.md"
-          printf "## A - []()\n\n- "
+          printf "## A - []()\n\n- " > "$README_PATH"
           echo "Created folder: $FOLDER_NAME"
+          echo "FOLDER_NAME=$FOLDER_NAME" >> $GITHUB_ENV
       - name: Commit and push changes
         run: |
           git config --global user.name 'github-actions[bot]'
