@@ -21,11 +21,7 @@ jobs:
           FOLDER_NAME="${{ github.ref_name }}"
           mkdir -p "$FOLDER_NAME"
           README_PATH="$FOLDER_NAME/README.md"
-          cat << EOF > "$README_PATH"
-## A - []()
-
--
-EOF
+          printf "## A - []()\n\n- "
           echo "Created folder: $FOLDER_NAME"
       - name: Commit and push changes
         run: |
