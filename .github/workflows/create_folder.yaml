@@ -23,27 +23,11 @@ jobs:
           README_PATH="$FOLDER_NAME/README.md"
           printf "## A - []()\n\n- " > "$README_PATH"
           echo "Created folder: $FOLDER_NAME"
-          echo "FOLDER_NAME=$FOLDER_NAME" >> $GITHUB_ENV
       - name: Commit and push changes
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-
-          echo "--- Current Directory ---"
-          pwd
-          echo "--- Listing Root Directory ---"
-          ls -la
-          echo "--- Listing Created Folder ($FOLDER_NAME) ---"
-          ls -la "$FOLDER_NAME"
-          echo "--- Git Status Before Add ---"
-          git status -s
-
-
           git add .
-
-          echo "--- Git Status After Add ---"
-          git status -s
-
 
           if ! git diff-index --quiet HEAD; then
             git commit -m "[Auto] Create Folder: ${{ github.ref_name }}"
